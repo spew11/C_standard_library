@@ -1,3 +1,4 @@
 int	ft_isdigit(int c) {
-	return (c >= '0' && c <= '9');
+	char c1 = (char)c;
+	return (c1 >= '0' && c1 <= '9');
 }

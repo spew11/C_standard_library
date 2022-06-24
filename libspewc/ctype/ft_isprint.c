@@ -1,3 +1,4 @@
 int	ft_isprint(int c) {
-	return (c >= 32 && c <= 126);
+	char c1 = (char)c;
+	return (c1 >= 32 && c1 <= 126);
 }
