@@ -1,4 +1,3 @@
 # C_standard_libray
-
-libspewc는 직접 구현한 C표준라이브러리 함수들과, C 표준라이브러리에서는 제공하지않지만 유용한 함수들을 구현하여 모아놓은 라이브러리이다.
-각각의 함수에대한 manpage와 간단한 설명을 정리해놓았다.
+# get_next_line
+# ft_printf
