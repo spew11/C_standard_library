@@ -1,3 +1,5 @@
+#include "libspewc.h"
+
 enum order {
 	null,
 	blank,
@@ -8,13 +10,13 @@ enum order {
 
 static int	order_of_char(char c) {
 
-	if (c == ' ' || c == '\n' || c == '\t') {
+	if (ft_isspace(c)) {
 		return blank;
 	}
 	else if (c == '-' || c == '+') {
 		return sign;
 	}
-	else if (c >= '0' && c <= '9') {
+	else if (ft_isdigit(c)) {
 		return digit;
 	}
 	else {
