@@ -33,20 +33,25 @@ int	ft_atoi(const char *str)
 	for (int i = 0; str[i] != '\0'; i++) {
 		if (order_of_char(str[i]) >= now_order) {
 			now_order = order_of_char(str[i]);
-			if (now_order == blank)
+			if (now_order == blank) {
 				continue;
+			}
 			else if (now_order == sign){
-				if (str[i] == '-')
+				if (str[i] == '-') {
 					now_sign *= -1;
+				}
 				now_order = digit;
 			}
-			else if (now_order == digit)
+			else if (now_order == digit) {
 				num = (num * 10) + str[i] - '0';
-			else if (now_order == etc)
+			}
+			else if (now_order == etc) {
 				break;
+			}
 		}
-		else
+		else {
 			break;
+		}
 	}
 	return (num * now_sign);
 }
