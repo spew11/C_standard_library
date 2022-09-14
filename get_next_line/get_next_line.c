@@ -1,4 +1,4 @@
-#include "../libspewc.h"
+#include "libspewc.h"
 
 static char	*fill_line(char **linebuf, int newline_flag) {
 	char	*line;

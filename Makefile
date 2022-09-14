@@ -1,22 +1,74 @@
 NAME = libspewc.a
 
 CC = gcc
-
 CCFLAGS = -Wall -Wextra -Werror -I .
 
 LIBC = ar rc
 LIBR = ranlib
 
-LIBSPEWC_NAME = libspewc.a
-LIBSPEWC_DIR = libspewc/
-LIBSPEWC = $(addprefix $(LIBSPEWC_DIR), $(LIBSPEWC_NAME))
+CTYPE = ft_isprint.c \
+		ft_isspace.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_tolower.c \
+		ft_toupper.c \
+
+LIST =  ft_lstadd_back.c \
+		ft_lstadd_front.c \
+		ft_lstclear.c \
+		ft_lstdelone.c \
+		ft_lstiter.c \
+		ft_lstlast.c \
+		ft_lstnew.c \
+		ft_lstsize.c \
+
+STDIO = ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putunbr_fd.c \
+		ft_puthex_fd.c \
+		ft_putptr_fd.c\
+
+STRING = ft_memcmp.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memset.c \
+		ft_memchr.c \
+		ft_bzero.c \
+		ft_strmapi.c \
+		ft_strchr.c \
+		ft_strncmp.c \
+		ft_strdup.c \
+		ft_strnstr.c \
+		ft_striteri.c \
+		ft_strrchr.c \
+		ft_strlcat.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_strlcpy.c \
+		ft_strlen.c \
+		ft_substr.c \
+		ft_split.c \
+		get_idx.c \
+
+STDLIB = ft_atoi.c \
+		ft_itoa.c \
+		ft_calloc.c \
 
 FT_PRINTF = ft_printf.c
 
 GET_NEXT_LINE = get_next_line.c
 
-SRCS = $(addprefix ft_printf/, $(FT_PRINTF)) \
-	   $(addprefix get_next_line/, $(GET_NEXT_LINE)) \
+SRCS = $(addprefix libft/ctype/, $(CTYPE)) \
+		$(addprefix libft/list/, $(LIST)) \
+		$(addprefix libft/stdio/, $(STDIO)) \
+		$(addprefix libft/string/, $(STRING)) \
+		$(addprefix libft/stdlib/, $(STDLIB)) \
+		$(addprefix ft_printf/, $(FT_PRINTF)) \
+		$(addprefix get_next_line/, $(GET_NEXT_LINE)) \
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -25,20 +77,15 @@ all: $(NAME)
 .c.o :
 		$(CC) $(CCFLAGS) -c -o $(<:.c=.o) $<
 
-$(LIBSPEWC):
-		make -C $(LIBSPEWC_DIR)
-
-$(NAME): $(OBJS) $(LIBSPEWC)
-		$(LIBC) $(NAME) $(OBJS) $(LIBSPEWC)
+$(NAME): $(OBJS)
+		$(LIBC) $(NAME) $(OBJS)
 		$(LIBR) $(NAME)
 
 clean:
 		rm -f $(OBJS)
-		make -C $(LIBSPEWC_DIR) clean
 
 fclean: clean
 		rm -f $(NAME)
-		make -C $(LIBSPEWC_DIR) fclean
 
 re: fclean all
 

@@ -1,4 +1,4 @@
-#include "../libspewc.h"
+#include "libspewc.h"
 
 static int	print_conversion(char c, va_list ap) {
 	int	res = 0;
