@@ -52,7 +52,7 @@ STRING = ft_memcmp.c \
 		ft_strlen.c \
 		ft_substr.c \
 		ft_split.c \
-		ft_idxoffset.c \
+		get_idx.c \
 
 STDLIB = ft_atoi.c \
 		ft_itoa.c \

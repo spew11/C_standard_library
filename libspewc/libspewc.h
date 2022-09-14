@@ -21,7 +21,7 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 //string
 void				ft_bzero(void *s, size_t n);
-int				ft_idxoffset(const char *s, int c);
+int				get_idx(const char *s, int c);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -62,5 +62,7 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-
+//others
+int		ft_printf(const char *format, ...);
+char	*get_next_line(int fd, int buffer_size);
 #endif
