@@ -12,7 +12,7 @@ A Makefile in this repository creates a static library named **libspewc**
 
 ## Make static library
 ```bash
-git clone https://github.com/spew11/C_standard_library.git && \
+git clone https://github.com/spew11/spewc_library.git && \
   cd spewc_library && \
   make
 ```
