@@ -1,8 +1,8 @@
-# C_standard_library
+# spewc_library
 
 this repogitory is my C library.  
 It has not only functions implemented myself about that provided by C standard library but also functions I developed independently.  
-a Makefile in this repository creates a static library named **libspew.a**
+a Makefile in this repository creates a static library named **libspewc**
 ## Index
 - **ft_printf** implemented main feature of printf
 
