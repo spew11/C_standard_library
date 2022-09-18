@@ -1,8 +1,8 @@
 # spewc_library
 
-this repogitory is my C library.  
+This repository is my C library.  
 It has not only functions implemented myself about that provided by C standard library but also functions I developed independently.  
-a Makefile in this repository creates a static library named **libspewc**
+A Makefile in this repository creates a static library named **libspewc**
 ## Index
 - **ft_printf** implemented main feature of printf
 
@@ -12,7 +12,7 @@ a Makefile in this repository creates a static library named **libspewc**
 
 ## Make static library
 ```bash
-git clone https://github.com/spew11/spewC_library.git && \
-  cd spewC_library && \
+git clone https://github.com/spew11/C_standard_library.git && \
+  cd spewc_library && \
   make
 ```
