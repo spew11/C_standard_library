@@ -1,7 +1,7 @@
 # GET_NEXT_LINE
 
 get_next_line(int fd, int buffer_size); 
-> This function includes static library [libspewc](https://git@github.com/spew11/spewc_library/libspewc)
+> This function includes static library [libspewc](https://github.com/spew11/spewc_library/tree/main/libspewc)
 
 ## DESCRIPTION
 The get_next_line() function returns a line that includes the terminating \n character from the text file pointed by the file descripter.  
