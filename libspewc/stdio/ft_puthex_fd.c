@@ -2,7 +2,7 @@
 
 static int	ft_puthex_fd_recursive(unsigned int n, char conversion, int fd) {
 	int	res = 0;
-	char c;
+	char c = '\0';
 	if (n == 0) {
 		return 0;
 	}

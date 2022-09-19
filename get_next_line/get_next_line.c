@@ -4,7 +4,7 @@ static char	*fill_line(char **linebuf, int newline_flag) {
 	char	*line;
 	char	*tmp;
 	if (newline_flag) {
-		int line_len = get_idx(*linebuf, '\n') + 1;
+		int line_len = ft_indexof(*linebuf, '\n') + 1;
 		int linebuf_len = ft_strlen(*linebuf);
 		line = ft_substr(*linebuf, 0, line_len);
 		tmp = *linebuf;
@@ -43,7 +43,7 @@ static char	*fill_linebuf(int fd, char *buf, int buffer_size, char **linebuf) {
 			*linebuf = 0;
 			return 0;
 		}
-		if (get_idx(*linebuf, '\n') != -1) {
+		if (ft_indexof(*linebuf, '\n') != -1) {
 			return (fill_line(linebuf, 1));
 		}
 		else if (read_res == 0 || read_res < buffer_size) {
