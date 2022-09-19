@@ -1,5 +1,6 @@
 # GET_NEXT_LINE
 
+char *  
 get_next_line(int fd, int buffer_size); 
 > This function includes static library [libspewc](https://github.com/spew11/spewc_library/tree/main/libspewc)
 
